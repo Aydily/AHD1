@@ -1,0 +1,25 @@
+<h1>Usuarios</h1>
+<table>
+        <thead>
+        <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>DPI</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+      <tbody>
+      @for (user of usuarios; track user.id){
+      <tr >
+        <td>{{user.id}}</td>
+        <td>{{user.nombre}}</td>
+        <td>{{user.edad}}</td>
+        <td>{{user.dpi}}</td>
+        <td><button class="button raise" (click)="borrar($index)">Eliminar</button></td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+

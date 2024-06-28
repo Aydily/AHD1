@@ -1,0 +1,41 @@
+<section>
+  <hr>
+  <br>
+    <h3>Agregar usuario</h3>
+    
+    <form [formGroup]="formularioContacto" (ngSubmit) = "enviar()">
+      
+          <p>Nombre: </p>
+          <input type="text" formControlName="nombre">
+            @if(this.formularioContacto.get('nombre')?.errors?.['required']){
+              <span style="color: red;">Debe tener como mínimo 10 caracteres</span>
+            }
+     
+        
+          <p>Edad: </p>
+          <input type="text" formControlName="edad">
+            @if(this.formularioContacto.get('edad')?.errors?.['required']){
+              <span style="color: red;">La edad es requerida.</span>
+            }
+       
+          <p>DPI:  </p>
+          <input type="text" formControlName="dpi">
+            @if(this.formularioContacto.get('dpi')?.errors?.['required']){
+              <span style="color: red;">El DPI es requerido</span>
+            }
+            @if(this.formularioContacto.get('dpi')?.errors?.['minlength']){
+                <span style="color: red;">Debe contar con 13 caracteres</span>
+              }
+        
+      <br>
+      <button type="submit">Agregar</button>
+    </form>
+    <br>
+    @if (resultado != "") {
+    <button (click)="nuevo()">Nuevo usuario</button>}
+    <br>
+    <br>
+    <section>{{resultado}}</section>
+    <br>
+    <hr>
+  

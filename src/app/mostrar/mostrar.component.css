@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+}
+
+thead{
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+    margin: 10px;
+    text-align: center;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+.button {  
+    color: var(--color);
+    transition: 0.25s;
+    color: #ffa260;
+    &:hover,
+    &:focus { 
+      border-color: var(--hover);
+      color: #DBFF5E;
+    }
+  }
+.button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+  }
+  
+  code { 
+    color: #e4cb58;
+    font: inherit;
+  }
+
